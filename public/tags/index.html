@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags | Community Box Fire - Directorio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'boxfire': '#278c71',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <header class="border-b border-gray-800">
+        <nav class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="flex items-center">
+                        <img src="https://boxfirespain.com/wp-content/uploads/2023/04/cropped-BoxFireLogo-e1681747517743-1.jpeg" 
+                             alt="Box Fire Logo" 
+                             class="h-16 w-auto">
+                    </a>
+                    <a href="/" class="text-2xl font-bold text-white hover:text-boxfire transition-colors">
+                        Community Box Fire
+                    </a>
+                </div>
+                
+                
+                <div class="flex items-center space-x-8">
+                    <a href="https://boxfirespain.com" 
+                       class="text-white hover:text-boxfire transition-colors"
+                       target="_blank">
+                        Web Box Fire
+                    </a>
+                    <a href="/professionals/" 
+                       class="text-white hover:text-boxfire transition-colors">
+                        Profesionales
+                    </a>
+                    <a href="/tags/" 
+                       class="text-white hover:text-boxfire transition-colors">
+                        Profesiones
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+        
+<div class="max-w-4xl mx-auto">
+    
+    <div class="mb-8">
+        <input type="text" 
+               id="search"
+               placeholder="Buscar profesionales..." 
+               class="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-boxfire focus:border-boxfire text-white placeholder-gray-500"
+        >
+    </div>
+
+    
+    <div class="grid gap-6 md:grid-cols-2" id="professionals">
+        
+        <article class="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-boxfire transition-colors professional-card">
+            <h2 class="text-xl font-bold mb-2 text-white">Electricidad</h2>
+            
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+                
+            </div>
+
+            
+            <div class="mb-4 text-gray-400 space-y-2">
+                
+            </div>
+
+            
+            <div class="prose text-gray-400">
+                
+            </div>
+
+            
+            <div class="mt-4">
+                <a href="/tags/electricidad/" class="text-boxfire hover:text-green-400">Ver más información →</a>
+            </div>
+        </article>
+        
+        <article class="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-boxfire transition-colors professional-card">
+            <h2 class="text-xl font-bold mb-2 text-white">Fontanería</h2>
+            
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+                
+            </div>
+
+            
+            <div class="mb-4 text-gray-400 space-y-2">
+                
+            </div>
+
+            
+            <div class="prose text-gray-400">
+                
+            </div>
+
+            
+            <div class="mt-4">
+                <a href="/tags/fontaner%C3%ADa/" class="text-boxfire hover:text-green-400">Ver más información →</a>
+            </div>
+        </article>
+        
+        <article class="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-boxfire transition-colors professional-card">
+            <h2 class="text-xl font-bold mb-2 text-white">Mantenimiento</h2>
+            
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+                
+            </div>
+
+            
+            <div class="mb-4 text-gray-400 space-y-2">
+                
+            </div>
+
+            
+            <div class="prose text-gray-400">
+                
+            </div>
+
+            
+            <div class="mt-4">
+                <a href="/tags/mantenimiento/" class="text-boxfire hover:text-green-400">Ver más información →</a>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const search = document.getElementById('search');
+    const professionals = document.querySelectorAll('.professional-card');
+
+    search.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase();
+        
+        professionals.forEach(card => {
+            const content = card.textContent.toLowerCase();
+            card.style.display = content.includes(query) ? '' : 'none';
+        });
+    });
+});
+</script>
+
+    </main>
+</body>
+</html>

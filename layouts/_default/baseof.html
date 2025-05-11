@@ -3,13 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <title>{{ if .Title }}{{ .Title }} | {{ end }}Community Box Fire - Directorio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'boxfire': '#278c71',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm">
+<body class="bg-black text-white">
+    <header class="border-b border-gray-800">
         <nav class="container mx-auto px-4 py-6">
-            <a href="/" class="text-2xl font-bold text-gray-900">{{ .Site.Title }}</a>
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                <!-- Logo and Site Title -->
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="flex items-center">
+                        <img src="https://boxfirespain.com/wp-content/uploads/2023/04/cropped-BoxFireLogo-e1681747517743-1.jpeg" 
+                             alt="Box Fire Logo" 
+                             class="h-16 w-auto">
+                    </a>
+                    <a href="/" class="text-2xl font-bold text-white hover:text-boxfire transition-colors">
+                        Community Box Fire
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="flex items-center space-x-8">
+                    <a href="https://boxfirespain.com" 
+                       class="text-white hover:text-boxfire transition-colors"
+                       target="_blank">
+                        Web Box Fire
+                    </a>
+                    <a href="/professionals/" 
+                       class="text-white hover:text-boxfire transition-colors">
+                        Profesionales
+                    </a>
+                    <a href="/tags/" 
+                       class="text-white hover:text-boxfire transition-colors">
+                        Profesiones
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
     

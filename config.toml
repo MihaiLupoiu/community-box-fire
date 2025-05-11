@@ -1,4 +1,4 @@
-baseURL = 'https://example.com'
+baseURL = 'https://community.boxfirespain.com'
 languageCode = 'es'
 title = 'Community Box Fire - Directorio Profesional'
 defaultContentLanguage = 'es'
@@ -9,7 +9,8 @@ defaultContentLanguage = 'es'
 
 # Site parameters
 [params]
-  description = "Directorio profesional de nuestra comunidad para compartir y descubrir servicios"
+  description = "Directorio profesional de la comunidad Box Fire"
+  mainSiteURL = "https://boxfirespain.com"
   images = ["images/og-image.jpg"]
 
 # Menu
@@ -23,6 +24,10 @@ defaultContentLanguage = 'es'
     url = "/professionals/"
     weight = 2
   [[menu.main]]
-    name = "Etiquetas"
+    name = "Profesiones"
     url = "/tags/"
     weight = 3
+  [[menu.main]]
+    name = "Box Fire"
+    url = "https://boxfirespain.com"
+    weight = 4
