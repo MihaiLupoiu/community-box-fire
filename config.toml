@@ -31,3 +31,6 @@ defaultContentLanguage = 'es'
     name = "Box Fire"
     url = "https://boxfirespain.com"
     weight = 4
+
+# Make sure URLs include the base path in production
+canonifyURLs = true

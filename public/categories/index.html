@@ -3,14 +3,14 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories | BOX FIRE - Directorio</title>
+    <title>Categories | Community Box Fire - Directorio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'boxfire-red': '#CD0115',
+                        'boxfire': '#278c71',
                     }
                 }
             }
@@ -20,15 +20,34 @@
 <body class="bg-black text-white">
     <header class="border-b border-gray-800">
         <nav class="container mx-auto px-4 py-6">
-            <div class="flex items-center justify-between">
-                <a href="/" class="flex items-center">
-                    <img src="https://boxfirespain.com/wp-content/uploads/2023/01/logotipo-box-fire-rojo.svg" 
-                         alt="Box Fire Logo" 
-                         class="h-12 mr-3">
-                </a>
-                <div class="space-x-6">
-                    <a href="/professionals/" class="text-white hover:text-boxfire-red transition-colors">Profesionales</a>
-                    <a href="/tags/" class="text-white hover:text-boxfire-red transition-colors">Etiquetas</a>
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="flex items-center">
+                        <img src="https://boxfirespain.com/wp-content/uploads/2023/04/cropped-BoxFireLogo-e1681747517743-1.jpeg" 
+                             alt="Box Fire Logo" 
+                             class="h-16 w-auto">
+                    </a>
+                    <a href="/" class="text-2xl font-bold text-white hover:text-boxfire transition-colors">
+                        Community Box Fire
+                    </a>
+                </div>
+                
+                
+                <div class="flex items-center space-x-8">
+                    <a href="https://boxfirespain.com" 
+                       class="text-white hover:text-boxfire transition-colors"
+                       target="_blank">
+                        Web Box Fire
+                    </a>
+                    <a href="/professionals/" 
+                       class="text-white hover:text-boxfire transition-colors">
+                        Profesionales
+                    </a>
+                    <a href="/tags/" 
+                       class="text-white hover:text-boxfire transition-colors">
+                        Profesiones
+                    </a>
                 </div>
             </div>
         </nav>
@@ -42,7 +61,7 @@
         <input type="text" 
                id="search"
                placeholder="Buscar profesionales..." 
-               class="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-boxfire-red focus:border-boxfire-red text-white placeholder-gray-500"
+               class="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-boxfire focus:border-boxfire text-white placeholder-gray-500"
         >
     </div>
 

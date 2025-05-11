@@ -80,28 +80,35 @@
                id="quickSearch"
                placeholder="Buscar servicios o profesionales..." 
                class="w-full p-4 text-lg bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-boxfire focus:border-boxfire text-white placeholder-gray-500"
-               onkeyup="if(event.key === 'Enter') window.location.href = '/professionals/'"
         >
     </div>
+
+    <script>
+        document.getElementById('quickSearch').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                window.location.href = '\/professionals\/';
+            }
+        });
+    </script>
 
     
     <div class="mt-12">
         <h2 class="text-xl font-semibold text-gray-300 mb-4">Profesiones Disponibles</h2>
         <div class="flex flex-wrap gap-3">
             
-            <a href="/tags/electricidad" 
+            <a href="/tags/electricidad/" 
                class="px-4 py-2 rounded-full border border-gray-800 text-gray-400 hover:border-boxfire hover:text-boxfire transition-colors">
                 electricidad
                 <span class="text-sm text-gray-600 ml-1">(1)</span>
             </a>
             
-            <a href="/tags/fontaner%C3%ADa" 
+            <a href="/tags/fontaner%c3%ada/" 
                class="px-4 py-2 rounded-full border border-gray-800 text-gray-400 hover:border-boxfire hover:text-boxfire transition-colors">
                 fontanería
                 <span class="text-sm text-gray-600 ml-1">(1)</span>
             </a>
             
-            <a href="/tags/mantenimiento" 
+            <a href="/tags/mantenimiento/" 
                class="px-4 py-2 rounded-full border border-gray-800 text-gray-400 hover:border-boxfire hover:text-boxfire transition-colors">
                 mantenimiento
                 <span class="text-sm text-gray-600 ml-1">(1)</span>

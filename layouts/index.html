@@ -6,11 +6,11 @@
         
         <!-- Main CTA -->
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/professionals/" 
+            <a href="{{ "professionals/" | relURL }}" 
                class="inline-block bg-boxfire text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
                 Ver Profesionales
             </a>
-            <a href="/tags/" 
+            <a href="{{ "tags/" | relURL }}" 
                class="inline-block border border-boxfire text-boxfire px-8 py-3 rounded-lg hover:bg-boxfire hover:text-white transition-colors">
                 Explorar Profesiones
             </a>
@@ -23,16 +23,23 @@
                id="quickSearch"
                placeholder="Buscar servicios o profesionales..." 
                class="w-full p-4 text-lg bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-boxfire focus:border-boxfire text-white placeholder-gray-500"
-               onkeyup="if(event.key === 'Enter') window.location.href = '/professionals/'"
         >
     </div>
+
+    <script>
+        document.getElementById('quickSearch').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                window.location.href = '{{ "professionals/" | relURL }}';
+            }
+        });
+    </script>
 
     <!-- Featured categories -->
     <div class="mt-12">
         <h2 class="text-xl font-semibold text-gray-300 mb-4">Profesiones Disponibles</h2>
         <div class="flex flex-wrap gap-3">
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-            <a href="/tags/{{ $name | urlize }}" 
+            <a href="{{ (printf "tags/%s/" $name) | relURL }}" 
                class="px-4 py-2 rounded-full border border-gray-800 text-gray-400 hover:border-boxfire hover:text-boxfire transition-colors">
                 {{ $name }}
                 <span class="text-sm text-gray-600 ml-1">({{ len $taxonomy }})</span>
