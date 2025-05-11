@@ -1,0 +1,28 @@
+baseURL = 'https://example.com'
+languageCode = 'es'
+title = 'Community Box Fire - Directorio Profesional'
+defaultContentLanguage = 'es'
+
+# Enable tags
+[taxonomies]
+  tag = "tags"
+
+# Site parameters
+[params]
+  description = "Directorio profesional de nuestra comunidad para compartir y descubrir servicios"
+  images = ["images/og-image.jpg"]
+
+# Menu
+[menu]
+  [[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Profesionales"
+    url = "/professionals/"
+    weight = 2
+  [[menu.main]]
+    name = "Etiquetas"
+    url = "/tags/"
+    weight = 3

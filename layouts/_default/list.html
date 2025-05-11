@@ -1,0 +1,60 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto">
+    <!-- Search input -->
+    <div class="mb-8">
+        <input type="text" 
+               id="search"
+               placeholder="Buscar profesionales..." 
+               class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+    </div>
+
+    <!-- Professional cards -->
+    <div class="grid gap-6 md:grid-cols-2" id="professionals">
+        {{ range .Pages }}
+        <article class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow professional-card">
+            <h2 class="text-xl font-bold mb-2">{{ .Title }}</h2>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-4">
+                {{ range .Params.tags }}
+                <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">{{ . }}</span>
+                {{ end }}
+            </div>
+
+            <!-- Contact info -->
+            <div class="mb-4 text-gray-600">
+                {{ with .Params.contact }}
+                    {{ with .phone }}<p>📞 <a href="tel:{{ . }}" class="hover:text-blue-600">{{ . }}</a></p>{{ end }}
+                    {{ with .whatsapp }}<p>💬 <a href="https://wa.me/{{ replace . "+" "" }}" target="_blank" class="hover:text-blue-600">WhatsApp</a></p>{{ end }}
+                    {{ with .email }}<p>📧 <a href="mailto:{{ . }}" class="hover:text-blue-600">{{ . }}</a></p>{{ end }}
+                    {{ with .telegram }}<p>📱 <a href="https://t.me/{{ trimPrefix "@" . }}" target="_blank" class="hover:text-blue-600">{{ . }}</a></p>{{ end }}
+                {{ end }}
+            </div>
+
+            <!-- Description -->
+            <div class="prose text-gray-600">
+                {{ .Content }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</div>
+
+<!-- Simple search script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const search = document.getElementById('search');
+    const professionals = document.querySelectorAll('.professional-card');
+
+    search.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase();
+        
+        professionals.forEach(card => {
+            const content = card.textContent.toLowerCase();
+            card.style.display = content.includes(query) ? '' : 'none';
+        });
+    });
+});
+</script>
+{{ end }}
