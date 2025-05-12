@@ -7,19 +7,23 @@ contact:
     whatsapp: "+34 623 456 789"
     email: "juan.garcia@email.com"
     telegram: "@juangarcia"
-    address: "Calle Ejemplo 123, 28001 Madrid"  # Optional
-    website: "https://ejemplo.com"  # Optional
-image: ""  # Optional - remove if no image
-draft: false  # false = published, true = only visible in development
+    address: "Calle Ejemplo 123, 28001 Madrid"
+    website: "https://ejemplo.com"
+draft: false
 ---
+Fontanero y electricista con más de 15 años de experiencia en mantenimiento residencial.
 
-Fontanero y electricista con más de 15 años de experiencia en mantenimiento residencial. 
-Especializado en:
+## Especializado en
 
 * Reparaciones de fontanería
 * Instalaciones eléctricas
 * Mantenimiento general del hogar
 * Reparaciones urgentes
 
-Disponible de lunes a viernes de 9:00 a 18:00. Servicio en toda el área de Madrid.
-Presupuesto sin compromiso.
+## Horario y Servicio
+
+**Disponibilidad**: Lunes a viernes de 9:00 a 18:00
+
+**Zona de servicio**: Toda el área de Madrid
+
+**Presupuesto**: Sin compromiso

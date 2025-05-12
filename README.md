@@ -67,7 +67,19 @@ community-box-fire/
    image: "/images/professionals/filename.jpg"  # Optional
    draft: false
    ---
-   Your description in Spanish...
+   Breve descripción profesional.
+
+   ## Especialización
+
+   - Punto 1
+   - Punto 2
+   - Punto 3
+
+   ## Horario y Servicio
+
+   **Disponibilidad**: Horario de trabajo  
+   **Zona**: Área de servicio  
+   **Tarifas**: Información de precios
    ```
 
 ### Draft vs Published

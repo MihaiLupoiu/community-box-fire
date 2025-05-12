@@ -34,3 +34,22 @@ defaultContentLanguage = 'es'
 
 # Make sure URLs include the base path in production
 canonifyURLs = true
+
+# Markdown processing configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      hardWraps = false
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      wrapStandAloneImageWithinParagraph = false
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false
+
+# Ignore HTML warnings
+ignoreLogs = ['warning-goldmark-raw-html']
