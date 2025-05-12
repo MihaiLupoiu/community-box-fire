@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Directorio Profesional on My New Hugo Site</title>
-    <link>http://localhost:1313/professionals/</link>
-    <description>Recent content in Directorio Profesional on My New Hugo Site</description>
+    <title>Entrenamiento Funcional on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/entrenamiento-funcional/</link>
+    <description>Recent content in Entrenamiento Funcional on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Nov 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/professionals/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Juan García</title>
-      <link>http://localhost:1313/professionals/juan-garcia/</link>
-      <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/professionals/juan-garcia/</guid>
-      <description>&lt;p&gt;Fontanero y electricista con más de 15 años de experiencia en mantenimiento residencial.&lt;/p&gt;&#xA;&lt;h2 id=&#34;especializado-en&#34;&gt;Especializado en&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Reparaciones de fontanería&lt;/li&gt;&#xA;&lt;li&gt;Instalaciones eléctricas&lt;/li&gt;&#xA;&lt;li&gt;Mantenimiento general del hogar&lt;/li&gt;&#xA;&lt;li&gt;Reparaciones urgentes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;horario-y-servicio&#34;&gt;Horario y Servicio&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Disponibilidad&lt;/strong&gt;: Lunes a viernes de 9:00 a 18:00&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Zona de servicio&lt;/strong&gt;: Toda el área de Madrid&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Presupuesto&lt;/strong&gt;: Sin compromiso&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Fri, 23 Aug 1985 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/entrenamiento-funcional/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Raúl Castillo Amorós</title>
       <link>http://localhost:1313/professionals/raul-castillo-amoros/</link>

@@ -23,6 +23,24 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/deporte/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/entrenamiento-funcional/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/entrenamiento-personal/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fitness/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/professionals/raul-castillo-amoros/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/salud/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

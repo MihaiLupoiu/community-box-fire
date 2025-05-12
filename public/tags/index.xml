@@ -29,5 +29,40 @@
       <guid>http://localhost:1313/tags/mantenimiento/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Deporte</title>
+      <link>http://localhost:1313/tags/deporte/</link>
+      <pubDate>Fri, 23 Aug 1985 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/deporte/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entrenamiento Funcional</title>
+      <link>http://localhost:1313/tags/entrenamiento-funcional/</link>
+      <pubDate>Fri, 23 Aug 1985 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/entrenamiento-funcional/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entrenamiento Personal</title>
+      <link>http://localhost:1313/tags/entrenamiento-personal/</link>
+      <pubDate>Fri, 23 Aug 1985 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/entrenamiento-personal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fitness</title>
+      <link>http://localhost:1313/tags/fitness/</link>
+      <pubDate>Fri, 23 Aug 1985 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/fitness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Salud</title>
+      <link>http://localhost:1313/tags/salud/</link>
+      <pubDate>Fri, 23 Aug 1985 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/salud/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
