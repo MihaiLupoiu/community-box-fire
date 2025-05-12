@@ -7,6 +7,8 @@ contact:
     whatsapp: "+34 623 456 789"
     email: "juan.garcia@email.com"
     telegram: "@juangarcia"
+    address: "Calle Ejemplo 123, 28001 Madrid"  # Optional
+    website: "https://ejemplo.com"  # Optional
 image: ""  # Optional - remove if no image
 draft: false  # false = published, true = only visible in development
 ---

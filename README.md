@@ -10,7 +10,7 @@ A community-driven professional directory for sharing and discovering services o
   - Name
   - Tags/Skills
   - Description
-  - Contact information (phone, WhatsApp, email, Telegram)
+  - Contact information (phone, WhatsApp, email, Telegram, website, address)
   - Optional profile image
 
 ## 📋 Project Structure
@@ -59,9 +59,11 @@ community-box-fire/
    tags: ["tag1", "tag2"]
    contact:
        phone: "+34 XXX XXX XXX"
-       whatsapp: "+34 XXX XXX XXX"
-       email: "email@example.com"
-       telegram: "@username"
+       whatsapp: "+34 XXX XXX XXX"      # Optional
+       email: "email@example.com"        # Optional
+       telegram: "@username"             # Optional
+       website: "https://example.com"    # Optional
+       address: "Street Name 123, City"  # Optional
    image: "/images/professionals/filename.jpg"  # Optional
    draft: false
    ---

@@ -66,6 +66,20 @@
                     </a>
                 </p>
                 {{ end }}
+
+                {{ with .website }}
+                <p class="flex items-center">
+                    <span class="mr-2">🌐</span>
+                    <a href="{{ . }}" target="_blank" class="hover:text-boxfire">Sitio web</a>
+                </p>
+                {{ end }}
+
+                {{ with .address }}
+                <p class="flex items-center">
+                    <span class="mr-2">📍</span>
+                    <span class="hover:text-boxfire">{{ . }}</span>
+                </p>
+                {{ end }}
             </div>
             {{ end }}
         </div>
