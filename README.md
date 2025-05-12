@@ -68,6 +68,12 @@ community-box-fire/
    Your description in Spanish...
    ```
 
+### Draft vs Published
+- `draft: true` - Content only visible when running locally with `hugo server -D`
+- `draft: false` - Content visible both locally and on the live site
+
+Use drafts while preparing content, then set to `false` when ready to publish.
+
 3. (Optional) Add profile image to `static/images/professionals/`
 
 ## 🔍 Search and Filtering

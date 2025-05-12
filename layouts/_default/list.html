@@ -15,6 +15,16 @@
         <article class="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-boxfire transition-colors professional-card">
             <h2 class="text-xl font-bold mb-2 text-white">{{ .Title }}</h2>
             
+            <!-- Images (only if they exist) -->
+            {{ with .Params.image }}
+                {{ if ne . "" }}
+                <img src="{{ . | relURL }}" 
+                     alt="{{ $.Title }}" 
+                     class="w-full h-48 object-cover rounded-lg mb-4"
+                     onerror="this.style.display='none'">
+                {{ end }}
+            {{ end }}
+            
             <!-- Tags -->
             <div class="flex flex-wrap gap-2 mb-4">
                 {{ range .Params.tags }}

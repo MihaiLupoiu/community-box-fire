@@ -7,8 +7,8 @@ contact:
     whatsapp: "+34 623 456 789"
     email: "juan.garcia@email.com"
     telegram: "@juangarcia"
-image: "/images/professionals/juan-garcia.jpg"  # Optional
-draft: false
+image: ""  # Optional - remove if no image
+draft: false  # false = published, true = only visible in development
 ---
 
 Fontanero y electricista con más de 15 años de experiencia en mantenimiento residencial. 

@@ -19,8 +19,14 @@
                 {{ end }}
             </div>
 
+            <!-- Only show image if it exists and has a value -->
             {{ with .Params.image }}
-            <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="w-full h-64 object-cover rounded-lg mb-6">
+                {{ if ne . "" }}
+                <img src="{{ . | relURL }}" 
+                     alt="{{ $.Title }}" 
+                     class="w-full h-64 object-cover rounded-lg mb-6"
+                     onerror="this.style.display='none'">
+                {{ end }}
             {{ end }}
         </header>
 
