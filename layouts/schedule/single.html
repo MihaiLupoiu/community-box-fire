@@ -1,51 +1,147 @@
 {{ define "main" }}
-<div class="max-w-6xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-white mb-8">Horario</h1>
+<div class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-white mb-12 text-center">Horario de Clases</h1>
     
-    <div class="overflow-x-auto">
-        <table class="w-full bg-gray-900 rounded-lg border border-gray-800">
-            {{ $csv := readFile "/static/schedule.csv" }}
-            {{ $lines := split $csv "\n" }}
-            {{ $headerLine := index $lines 0 }}
-            {{ $headers := slice "Hora" "Lunes" "Martes" "Miércoles" "Jueves" "Viernes" "Sábado" "Domingo" }}
-            <thead>
-                <tr>
-                    {{ range $headers }}
-                    <th class="px-4 py-3 text-left text-sm font-semibold text-white border-b border-gray-800">
-                        {{ . }}
-                    </th>
-                    {{ end }}
-                </tr>
-            </thead>
-            <tbody>
-                {{ range after 1 $lines }}
-                    {{ $row := split . "," }}
-                    <tr class="border-b border-gray-800 hover:bg-gray-800">
-                        {{ range $i, $cell := $row }}
-                            <td class="px-4 py-3 text-sm {{ if eq $i 0 }}text-boxfire font-medium{{ else }}text-gray-300{{ end }}">
-                                {{ $activities := split $cell ";" }}
-                                {{ range $index, $activity := $activities }}
-                                    {{ if gt $index 0 }}<br>{{ end }}
-                                    <span class="inline-block {{ if ne $activity "Cerrado" }}hover:text-boxfire{{ else }}text-red-500{{ end }}">
-                                        {{ $activity }}
-                                    </span>
+    <!-- Weekdays Section -->
+    <div class="mb-16">
+        <h2 class="text-2xl font-semibold text-boxfire mb-8 text-center">Lunes a Viernes</h2>
+        
+        <!-- Morning Schedule -->
+        <div class="mb-12">
+            <h3 class="text-xl font-semibold text-gray-400 mb-6 text-center">Mañanas</h3>
+            <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700">
+                <div class="grid grid-cols-6 gap-6">
+                    <!-- Time Column -->
+                    <div>
+                        <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4">Hora</div>
+                        <div class="divide-y-2 divide-gray-800">
+                            {{ range first 10 (after 1 (split (readFile "/static/schedule.csv") "\n")) }}
+                                {{ $row := split . "," }}
+                                <div class="h-24 flex items-center justify-center text-gray-400 font-medium bg-black/20">{{ index $row 0 }}</div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    
+                    <!-- Days Columns -->
+                    {{ $csv := readFile "/static/schedule.csv" }}
+                    {{ $lines := split $csv "\n" }}
+                    {{ $headers := slice "Lunes" "Martes" "Miércoles" "Jueves" "Viernes" }}
+                    
+                    {{ range $dayIndex, $day := $headers }}
+                    <div>
+                        <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4">{{ $day }}</div>
+                        <div class="divide-y-2 divide-gray-800">
+                            {{ range $lineIndex, $line := first 10 (after 1 $lines) }}
+                                {{ $row := split $line "," }}
+                                {{ $cell := index $row (add $dayIndex 1) }}
+                                {{ if ne $cell "Cerrado" }}
+                                    {{ $activities := split $cell ";" }}
+                                    <div class="h-24 flex flex-col items-center justify-center space-y-3 bg-black/20 py-4">
+                                        {{ range $activities }}
+                                        <div class="px-4 py-1.5 rounded-lg {{ if eq . "CrossFit" }}text-red-400 bg-red-900/20 hover:bg-red-900/30{{ else }}text-boxfire bg-green-900/20 hover:bg-green-900/30{{ end }} transition-colors">
+                                            {{ . }}
+                                        </div>
+                                        {{ end }}
+                                    </div>
+                                {{ else }}
+                                    <div class="h-24 flex items-center justify-center bg-black/20">-</div>
                                 {{ end }}
-                            </td>
-                        {{ end }}
-                    </tr>
-                {{ end }}
-            </tbody>
-        </table>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Evening Schedule -->
+        <div>
+            <h3 class="text-xl font-semibold text-gray-400 mb-6 text-center">Tardes</h3>
+            <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700">
+                <div class="grid grid-cols-6 gap-6">
+                    <!-- Time Column -->
+                    <div>
+                        <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4">Hora</div>
+                        <div class="divide-y-2 divide-gray-800">
+                            {{ range after 10 (after 1 (split (readFile "/static/schedule.csv") "\n")) }}
+                                {{ $row := split . "," }}
+                                <div class="h-24 flex items-center justify-center text-gray-400 font-medium bg-black/20">{{ index $row 0 }}</div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    
+                    <!-- Days Columns -->
+                    {{ range $dayIndex, $day := $headers }}
+                    <div>
+                        <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4">{{ $day }}</div>
+                        <div class="divide-y-2 divide-gray-800">
+                            {{ range after 10 (after 1 $lines) }}
+                                {{ $row := split . "," }}
+                                {{ $cell := index $row (add $dayIndex 1) }}
+                                {{ if ne $cell "Cerrado" }}
+                                    {{ $activities := split $cell ";" }}
+                                    <div class="h-24 flex flex-col items-center justify-center space-y-3 bg-black/20 py-4">
+                                        {{ range $activities }}
+                                        <div class="px-4 py-1.5 rounded-lg {{ if eq . "CrossFit" }}text-red-400 bg-red-900/20 hover:bg-red-900/30{{ else }}text-boxfire bg-green-900/20 hover:bg-green-900/30{{ end }} transition-colors">
+                                            {{ . }}
+                                        </div>
+                                        {{ end }}
+                                    </div>
+                                {{ else }}
+                                    <div class="h-24 flex items-center justify-center bg-black/20">-</div>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="mt-8 p-6 bg-gray-900 rounded-lg border border-gray-800">
-        <h2 class="text-xl font-semibold text-white mb-4">Leyenda</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
-            <div>
-                <span class="text-boxfire">CrossFit:</span> Clases dirigidas de CrossFit
+    <!-- Saturday Section -->
+    <div class="mb-16">
+        <h2 class="text-2xl font-semibold text-boxfire mb-8 text-center">Sábado</h2>
+        <div class="max-w-md mx-auto">
+            <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700">
+                <div class="grid grid-cols-2 gap-6">
+                    <!-- Time Column -->
+                    <div>
+                        <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4">Hora</div>
+                        <div class="divide-y-2 divide-gray-800">
+                            {{ range slice "08:00-09:00" "09:00-10:00" "10:00-11:00" "11:00-12:00" "12:00-13:00" }}
+                            <div class="h-24 flex items-center justify-center text-gray-400 font-medium bg-black/20">{{ . }}</div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    
+                    <!-- Activities Column -->
+                    <div>
+                        <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4">Clases</div>
+                        <div class="divide-y-2 divide-gray-800">
+                            {{ range slice "CrossFit" "CrossFit" "CrossFit" "CrossFit" "CrossFit" }}
+                            <div class="h-24 flex items-center justify-center bg-black/20">
+                                <div class="px-4 py-1.5 rounded-lg text-red-400 bg-red-900/20 hover:bg-red-900/30 transition-colors">{{ . }}</div>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span class="text-boxfire">Open Box:</span> Entrenamiento libre
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="max-w-2xl mx-auto p-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl border border-gray-700">
+        <h2 class="text-xl font-bold text-white mb-6 text-center">Tipos de Clases</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-center justify-center space-x-3">
+                <div class="px-4 py-1.5 rounded-lg text-red-400 bg-red-900/20">CrossFit</div>
+                <span class="text-gray-300">Clases dirigidas</span>
+            </div>
+            <div class="flex items-center justify-center space-x-3">
+                <div class="px-4 py-1.5 rounded-lg text-boxfire bg-green-900/20">Open Box</div>
+                <span class="text-gray-300">Entrenamiento libre</span>
             </div>
         </div>
     </div>
