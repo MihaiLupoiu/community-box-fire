@@ -4,11 +4,12 @@
     
     <div class="overflow-x-auto">
         <table class="w-full bg-gray-900 rounded-lg border border-gray-800">
+            {{ $csv := readFile "/static/schedule.csv" }}
+            {{ $lines := split $csv "\n" }}
+            {{ $headerLine := index $lines 0 }}
+            {{ $headers := slice "Hora" "Lunes" "Martes" "Miércoles" "Jueves" "Viernes" "Sábado" "Domingo" }}
             <thead>
                 <tr>
-                    {{ $csvFile := readFile "data/schedule.csv" }}
-                    {{ $csvLines := split $csvFile "\n" }}
-                    {{ $headers := split (index $csvLines 0) "," }}
                     {{ range $headers }}
                     <th class="px-4 py-3 text-left text-sm font-semibold text-white border-b border-gray-800">
                         {{ . }}
@@ -17,21 +18,21 @@
                 </tr>
             </thead>
             <tbody>
-                {{ range after 1 $csvLines }}
-                {{ $row := split . "," }}
-                <tr class="border-b border-gray-800 hover:bg-gray-800">
-                    {{ range $i, $cell := $row }}
-                        <td class="px-4 py-3 text-sm {{ if eq $i 0 }}text-boxfire font-medium{{ else }}text-gray-300{{ end }}">
-                            {{ $activities := split $cell ";" }}
-                            {{ range $index, $activity := $activities }}
-                                {{ if gt $index 0 }}<br>{{ end }}
-                                <span class="inline-block {{ if ne $activity "Cerrado" }}hover:text-boxfire{{ else }}text-red-500{{ end }}">
-                                    {{ $activity }}
-                                </span>
-                            {{ end }}
-                        </td>
-                    {{ end }}
-                </tr>
+                {{ range after 1 $lines }}
+                    {{ $row := split . "," }}
+                    <tr class="border-b border-gray-800 hover:bg-gray-800">
+                        {{ range $i, $cell := $row }}
+                            <td class="px-4 py-3 text-sm {{ if eq $i 0 }}text-boxfire font-medium{{ else }}text-gray-300{{ end }}">
+                                {{ $activities := split $cell ";" }}
+                                {{ range $index, $activity := $activities }}
+                                    {{ if gt $index 0 }}<br>{{ end }}
+                                    <span class="inline-block {{ if ne $activity "Cerrado" }}hover:text-boxfire{{ else }}text-red-500{{ end }}">
+                                        {{ $activity }}
+                                    </span>
+                                {{ end }}
+                            </td>
+                        {{ end }}
+                    </tr>
                 {{ end }}
             </tbody>
         </table>
@@ -39,12 +40,9 @@
 
     <div class="mt-8 p-6 bg-gray-900 rounded-lg border border-gray-800">
         <h2 class="text-xl font-semibold text-white mb-4">Leyenda</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-300">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
             <div>
                 <span class="text-boxfire">CrossFit:</span> Clases dirigidas de CrossFit
-            </div>
-            <div>
-                <span class="text-boxfire">Funcional:</span> Entrenamiento funcional
             </div>
             <div>
                 <span class="text-boxfire">Open Box:</span> Entrenamiento libre
