@@ -6,6 +6,15 @@
     <div class="mb-16">
         <h2 class="text-2xl font-semibold text-boxfire mb-8 text-center">Lunes a Viernes</h2>
         
+        {{ $csv := "" }}
+        {{ if eq hugo.Environment "development" }}
+            {{ $csv = readFile "/static/data/schedule.csv" }}
+        {{ else }}
+            {{ $csv = readFile "data/schedule.csv" }}
+        {{ end }}
+        {{ $lines := split $csv "\n" }}
+        {{ $headers := slice "Lunes" "Martes" "Miércoles" "Jueves" "Viernes" }}
+        
         <!-- Schedule Tabs (Mobile Only) -->
         <div class="md:hidden mb-6">
             <div class="flex rounded-lg border border-gray-700 overflow-hidden">
@@ -24,7 +33,7 @@
                         <div>
                             <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4">Hora</div>
                             <div class="divide-y-2 divide-gray-800">
-                                {{ range first 10 (after 1 (split (readFile "/static/schedule.csv") "\n")) }}
+                                {{ range first 10 (after 1 $lines) }}
                                     {{ $row := split . "," }}
                                     <div class="h-20 md:h-24 flex items-center justify-center text-gray-400 text-sm md:text-base font-medium bg-black/20 px-2">{{ index $row 0 }}</div>
                                 {{ end }}
@@ -32,10 +41,6 @@
                         </div>
                         
                         <!-- Days Columns -->
-                        {{ $csv := readFile "/static/schedule.csv" }}
-                        {{ $lines := split $csv "\n" }}
-                        {{ $headers := slice "Lunes" "Martes" "Miércoles" "Jueves" "Viernes" }}
-                        
                         {{ range $dayIndex, $day := $headers }}
                         <div>
                             <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4 text-sm md:text-base">{{ $day }}</div>
@@ -74,7 +79,7 @@
                         <div>
                             <div class="font-bold text-boxfire text-center h-10 flex items-center justify-center border-b border-gray-700 mb-4">Hora</div>
                             <div class="divide-y-2 divide-gray-800">
-                                {{ range after 10 (after 1 (split (readFile "/static/schedule.csv") "\n")) }}
+                                {{ range after 10 (after 1 $lines) }}
                                     {{ $row := split . "," }}
                                     <div class="h-20 md:h-24 flex items-center justify-center text-gray-400 text-sm md:text-base font-medium bg-black/20 px-2">{{ index $row 0 }}</div>
                                 {{ end }}
