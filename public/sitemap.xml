@@ -2,28 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/professionals/</loc>
-    <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/electricidad/</loc>
-    <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/fontaner%C3%ADa/</loc>
-    <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/professionals/juan-garcia/</loc>
-    <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/mantenimiento/</loc>
-    <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/deporte/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/professionals/</loc>
     <lastmod>1985-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/entrenamiento-funcional/</loc>
@@ -35,11 +17,26 @@
     <loc>http://localhost:1313/tags/fitness/</loc>
     <lastmod>1985-08-23T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/professionals/raul-castillo-amoros/</loc>
     <lastmod>1985-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/salud/</loc>
     <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>1985-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/informatico/</loc>
+    <lastmod>1963-07-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/professionals/jaime-dembilio-sifres/</loc>
+    <lastmod>1963-07-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/redes/</loc>
+    <lastmod>1963-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>

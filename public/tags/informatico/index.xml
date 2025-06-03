@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Informatico on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/informatico/</link>
+    <description>Recent content in Informatico on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jul 1963 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/informatico/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jaime Dembilio Sifres</title>
+      <link>http://localhost:1313/professionals/jaime-dembilio-sifres/</link>
+      <pubDate>Tue, 02 Jul 1963 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/professionals/jaime-dembilio-sifres/</guid>
+      <description>&lt;p&gt;Informático con más de 30 años de experiencia en el sector, especializado en la configuración y reparación de equipos informáticos, así como en el diseño y configuración de redes locales para pequeñas y medianas empresas. Ofrezco asesoría informática personalizada para resolver cualquier problema técnico que pueda surgir.&lt;/p&gt;&#xA;&lt;h2 id=&#34;especialización&#34;&gt;Especialización&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Configuración y reparación equipos informáticos&lt;/li&gt;&#xA;&lt;li&gt;Configuración y diseño de redes locales para pequeñas y medianas empresas&lt;/li&gt;&#xA;&lt;li&gt;Asesoria informáticaa&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;horario-y-servicio&#34;&gt;Horario y Servicio&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Disponibilidad&lt;/strong&gt;: 09:00 - 20:00&lt;br&gt;&#xA;&lt;strong&gt;Zona&lt;/strong&gt;: Castellón y provincia&#xA;&lt;strong&gt;Tarifas&lt;/strong&gt;: Según trabajo.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
