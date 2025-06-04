@@ -3,10 +3,10 @@ title: "Raúl Castillo Amorós"
 date: 1985-08-23
 tags: ["entrenamiento personal", "fitness", "deporte", "salud", "entrenamiento funcional"]
 contact:
-    phone: "+34 671741089"
-    whatsapp: "+34 671741089"
-    email: "r.castilloamoros@gmail.com"
-    address: "Carrer Amelia Ferrer Armengot, 8,"
+    phones: ["+34 671741089"]
+    whatsapp: ["+34 671741089"]
+    emails: ["r.castilloamoros@gmail.com"]
+    addresses: ["Carrer Amelia Ferrer Armengot, 8"]
 draft: false
 ---
 Entrenador personal certificado y especialista en Ciencias de la Actividad Física y Deportiva con amplia experiencia en entrenamiento funcional y personalizado. Comprometido con ayudar a mis clientes a alcanzar sus objetivos de salud y bienestar a través de programas adaptados a sus necesidades específicas.

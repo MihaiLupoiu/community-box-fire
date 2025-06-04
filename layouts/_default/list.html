@@ -35,12 +35,36 @@
             <!-- Contact info -->
             <div class="mb-4 text-gray-400 space-y-2">
                 {{ with .Params.contact }}
-                    {{ with .phone }}<p class="hover:text-boxfire">📞 <a href="tel:{{ . }}">{{ . }}</a></p>{{ end }}
-                    {{ with .whatsapp }}<p class="hover:text-boxfire">💬 <a href="https://wa.me/{{ replace . "+" "" }}" target="_blank">WhatsApp</a></p>{{ end }}
-                    {{ with .email }}<p class="hover:text-boxfire">📧 <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
-                    {{ with .telegram }}<p class="hover:text-boxfire">📱 <a href="https://t.me/{{ strings.TrimPrefix "@" . }}" target="_blank">{{ . }}</a></p>{{ end }}
-                    {{ with .website }}<p class="hover:text-boxfire">🌐 <a href="{{ . }}" target="_blank">Sitio web</a></p>{{ end }}
-                    {{ with .address }}<p class="hover:text-boxfire">📍 {{ . }}</p>{{ end }}
+                    {{ with .phones }}
+                        {{ range . }}
+                        <p class="hover:text-boxfire">📞 <a href="tel:{{ . }}">{{ . }}</a></p>
+                        {{ end }}
+                    {{ end }}
+                    {{ with .whatsapp }}
+                        {{ range . }}
+                        <p class="hover:text-boxfire">💬 <a href="https://wa.me/{{ replace . "+" "" }}" target="_blank">WhatsApp</a></p>
+                        {{ end }}
+                    {{ end }}
+                    {{ with .emails }}
+                        {{ range . }}
+                        <p class="hover:text-boxfire">📧 <a href="mailto:{{ . }}">{{ . }}</a></p>
+                        {{ end }}
+                    {{ end }}
+                    {{ with .telegram }}
+                        {{ range . }}
+                        <p class="hover:text-boxfire">📱 <a href="https://t.me/{{ strings.TrimPrefix "@" . }}" target="_blank">{{ . }}</a></p>
+                        {{ end }}
+                    {{ end }}
+                    {{ with .websites }}
+                        {{ range . }}
+                        <p class="hover:text-boxfire">🌐 <a href="{{ . }}" target="_blank">Sitio web</a></p>
+                        {{ end }}
+                    {{ end }}
+                    {{ with .addresses }}
+                        {{ range . }}
+                        <p class="hover:text-boxfire">📍 {{ . }}</p>
+                        {{ end }}
+                    {{ end }}
                 {{ end }}
             </div>
 

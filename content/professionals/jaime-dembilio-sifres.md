@@ -3,12 +3,12 @@ title: "Jaime Dembilio Sifres"
 date: 1963-07-02
 tags: ["Informatico", "Redes"]
 contact:
-    phone: "+34 654426153"
-    whatsapp: "+34 654426153"      # Optional
-    email: "dembilio@gmail.com"        # Optional
-    telegram: "@dembilio"             # Optional
-    website: "http://www.dembilio.com"    # Optional
-    address: "C/ Apostol Santigo,38, Benicasim"  # Optional
+    phones: ["+34 654426153"]
+    whatsapp: ["+34 654426153"]
+    emails: ["dembilio@gmail.com"]
+    telegram: ["@dembilio"]
+    websites: ["http://www.dembilio.com"]
+    addresses: ["C/ Apostol Santigo,38, Benicasim"]
 image: "/images/professionals/filename.jpg"  # Optional
 draft: false
 ---
