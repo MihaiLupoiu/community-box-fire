@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Branding on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/branding/</link>
+    <description>Recent content in Branding on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/branding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pablo Garcia Pruñonosa</title>
+      <link>http://localhost:1313/professionals/pablo-garcia-prunonosa/</link>
+      <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/professionals/pablo-garcia-prunonosa/</guid>
+      <description>&lt;p&gt;Creativo Publicitario Freelance especializado en Dirección de Arte y Diseño Gráfico con más de 10 años de experiencia en el mundo del diseño, la comunicación y la publicidad.&lt;/p&gt;&#xA;&lt;p&gt;Durante mi trayectoria profesional he tenido la oportunidad de trabajar para grandes marcas y clientes de todos los sectores en estudios y agencias de publicidad de Madrid, Valencia, Castellón y Barcelona. Estudié Publicidad y Relaciones Públicas por la Universidad CEU Cardenal Herrera de Valencia.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
