@@ -61,6 +61,16 @@
                 </p>
                 {{ end }}
                 
+                <!-- Instagram handles -->
+                {{ range .instagram }}
+                <p class="flex items-center">
+                    <span class="mr-2">📸</span>
+                    <a href="https://instagram.com/{{ strings.TrimPrefix "@" . }}" target="_blank" class="hover:text-boxfire">
+                        {{ . }}
+                    </a>
+                </p>
+                {{ end }}
+
                 <!-- Telegram handles -->
                 {{ range .telegram }}
                 <p class="flex items-center">
